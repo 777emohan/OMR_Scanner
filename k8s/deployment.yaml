@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omr-scanner
+  namespace: omr-scanner
+  labels:
+    app: omr-scanner
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: omr-scanner
+  template:
+    metadata:
+      labels:
+        app: omr-scanner
+    spec:
+      containers:
+      - name: omr-scanner
+        image: omr-scanner:latest
+        ports:
+        - containerPort: 8501
+        envFrom:
+        - configMapRef:
+            name: omr-scanner-config
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        volumeMounts:
+        - name: omr-data
+          mountPath: /app/set1_papers
+        - name: omr-data
+          mountPath: /app/set2_papers
+        - name: omr-data
+          mountPath: /app/answers
+        - name: omr-data
+          mountPath: /app/results
+        - name: omr-data
+          mountPath: /app/excel_answer_keys
+        livenessProbe:
+          exec:
+            command:
+            - python
+            - -c
+            - "import cv2, numpy, pandas; print('OK')"
+          initialDelaySeconds: 30
+          periodSeconds: 30
+        readinessProbe:
+          exec:
+            command:
+            - python
+            - -c
+            - "import cv2, numpy, pandas; print('OK')"
+          initialDelaySeconds: 10
+          periodSeconds: 10
+      volumes:
+      - name: omr-data
+        persistentVolumeClaim:
+          claimName: omr-scanner-pvc

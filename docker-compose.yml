@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  omr-scanner:
+    build: .
+    container_name: omr-scanner
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./set1_papers:/app/set1_papers
+      - ./set2_papers:/app/set2_papers
+      - ./answers:/app/answers
+      - ./results:/app/results
+      - ./excel_answer_keys:/app/excel_answer_keys
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import cv2, numpy, pandas; print('OK')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add a web server for static files
+  nginx:
+    image: nginx:alpine
+    container_name: omr-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./omr_results_dynamic.html:/usr/share/nginx/html/index.html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - omr-scanner
+    restart: unless-stopped

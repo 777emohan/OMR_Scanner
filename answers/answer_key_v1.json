@@ -1,0 +1,22 @@
+{
+  "Q1": {"Subject_1": 1, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q2": {"Subject_1": 0, "Subject_2": 1, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q3": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 1, "Subject_4": 0, "Subject_5": 0},
+  "Q4": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 1, "Subject_5": 0},
+  "Q5": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 1},
+  "Q6": {"Subject_1": 1, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q7": {"Subject_1": 0, "Subject_2": 1, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q8": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 1, "Subject_4": 0, "Subject_5": 0},
+  "Q9": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 1, "Subject_5": 0},
+  "Q10": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 1},
+  "Q11": {"Subject_1": 1, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q12": {"Subject_1": 0, "Subject_2": 1, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q13": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 1, "Subject_4": 0, "Subject_5": 0},
+  "Q14": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 1, "Subject_5": 0},
+  "Q15": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 1},
+  "Q16": {"Subject_1": 1, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q17": {"Subject_1": 0, "Subject_2": 1, "Subject_3": 0, "Subject_4": 0, "Subject_5": 0},
+  "Q18": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 1, "Subject_4": 0, "Subject_5": 0},
+  "Q19": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 1, "Subject_5": 0},
+  "Q20": {"Subject_1": 0, "Subject_2": 0, "Subject_3": 0, "Subject_4": 0, "Subject_5": 1}
+}

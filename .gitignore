@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Debug files
+debug_*.jpg
+debug_*.png
+debug_*.jpeg
+
+# Temporary files
+*.tmp
+*.temp
+
+# Results (keep only final ones)
+omr_results_combined.csv
+omr_results_corrected.csv
+omr_results_improved_scoring.csv
+
+# System files
+system_report.json
+
+# Empty directories
+set1_answers/
+set2_answers/
